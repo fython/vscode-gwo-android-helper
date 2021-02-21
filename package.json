@@ -9,6 +9,12 @@
     "theme": "light"
   },
   "license": "MIT",
+  "homepage": "https://github.com/fython/vscode-gwo-android-helper#readme",
+  "bugs": "https://github.com/fython/vscode-gwo-android-helper/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fython/vscode-gwo-android-helper.git"
+  },
   "engines": {
     "vscode": "^1.53.0"
   },
