@@ -1,0 +1,131 @@
+{
+  "name": "gwo-android-helper",
+  "version": "0.0.1",
+  "displayName": "%gwo.android.extension.name%",
+  "description": "%gwo.android.extension.description%",
+  "publisher": "Siubeng",
+  "galleryBanner": {
+    "color": "#c6f68d",
+    "theme": "light"
+  },
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.53.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "android",
+    "adb",
+    "helper"
+  ],
+  "author": {
+    "name": "Siubeng",
+    "email": "fythonx@gmail.com"
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "adbDevices.refresh",
+        "title": "%gwo.android.devices.refresh%",
+        "icon": "$(extensions-refresh)"
+      },
+      {
+        "command": "adbDevices.openDeviceInternalStorage",
+        "title": "%gwo.android.devices.openInternalStorage%",
+        "icon": "$(extensions-remote)"
+      },
+      {
+        "command": "adbDevices.openDeviceFolder",
+        "title": "%gwo.android.devices.openFolder%"
+      },
+      {
+        "command": "adbDevices.openTerminal",
+        "title": "%gwo.android.devices.openTerminal%"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "adbDevices.refresh",
+          "when": "view == adbDevices",
+          "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "adbDevices.openDeviceInternalStorage",
+          "when": "view == adbDevices && viewItem == adbDevice",
+          "group": "inline"
+        },
+        {
+          "command": "adbDevices.openDeviceFolder",
+          "when": "view == adbDevices && viewItem == adbDevice"
+        },
+        {
+          "command": "adbDevices.openTerminal",
+          "when": "view == adbDevices && viewItem == adbDevice"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "gwo-android-helper",
+          "title": "%gwo.android.extension.name%",
+          "icon": "assets/adb.svg"
+        }
+      ]
+    },
+    "views": {
+      "gwo-android-helper": [
+        {
+          "id": "adbDevices",
+          "name": "%gwo.android.devices.viewTitle%",
+          "contextualTitle": "%gwo.android.extension.name%"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "adbDevices",
+        "contents": "%gwo.android.devices.welcome%"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "webpack --mode production --config ./build/webpack.config.js",
+    "webpack": "webpack --mode development --config ./build/webpack.config.js",
+    "webpack-dev": "webpack --mode development --watch --config ./build/webpack.config.js",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.4",
+    "@types/node": "^12.11.7",
+    "@types/vscode": "^1.53.0",
+    "@typescript-eslint/eslint-plugin": "^4.9.0",
+    "@typescript-eslint/parser": "^4.9.0",
+    "eslint": "^7.15.0",
+    "glob": "^7.1.6",
+    "mocha": "^8.1.3",
+    "ts-loader": "^8.0.17",
+    "typescript": "^4.1.2",
+    "vscode-test": "^1.4.1",
+    "webpack": "^5.23.0",
+    "webpack-cli": "^4.5.0"
+  },
+  "dependencies": {
+    "@devicefarmer/adbkit": "^2.11.3",
+    "concat-stream": "^2.0.0",
+    "vscode-nls": "^5.0.0"
+  }
+}

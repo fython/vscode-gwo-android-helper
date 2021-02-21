@@ -1,0 +1,20 @@
+{
+    "gwo.android.extension.name": "Gwo 安卓助手",
+    "gwo.android.extension.description": "通过 Visual Studio Code 在你的 Android 设备上浏览文件",
+    "gwo.android.devices.viewTitle": "设备",
+    "gwo.android.devices.refresh": "刷新",
+    "gwo.android.devices.openInternalStorage": "打开内置存储",
+    "gwo.android.devices.openFolder": "打开文件夹...",
+    "gwo.android.devices.openTerminal": "在此设备上打开终端",
+    "gwo.android.devices.welcome": "没有找到设备。",
+    "gwo.android.devices.chooseFolderTitle": "在 {0} 上选择文件夹",
+    "gwo.android.folder.openMessage": "\"{0}\" 已经在当前工作区打开了，切换到文件管理栏就可以看到了。",
+    "gwo.android.folder.internalStorageTitle": "内置 - {0}",
+    "gwo.android.terminal.title": "Adb 终端 - {0}",
+    "gwo.android.type.device": "在线",
+    "gwo.android.type.offline": "离线",
+    "gwo.android.type.recovery": "恢复模式",
+    "gwo.android.type.fastboot": "刷机模式",
+    "gwo.android.type.sideload": "旁加载",
+    "gwo.android.type.unauthorized": "未授权"
+}

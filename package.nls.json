@@ -1,0 +1,20 @@
+{
+    "gwo.android.extension.name": "Gwo Android Helper",
+    "gwo.android.extension.description": "Browse files on your Android devices with Visual Studio Code",
+    "gwo.android.devices.viewTitle": "Devices",
+    "gwo.android.devices.refresh": "Refresh",
+    "gwo.android.devices.openInternalStorage": "Open internal stroage",
+    "gwo.android.devices.openFolder": "Open folder...",
+    "gwo.android.devices.openTerminal": "Terminal on this device",
+    "gwo.android.devices.welcome": "No devices found.",
+    "gwo.android.devices.chooseFolderTitle": "Choose folder on {0}",
+    "gwo.android.folder.openMessage": "\"{0}\" is open in current workspace. Switch to file explorer tab then you can see it.",
+    "gwo.android.folder.internalStorageTitle": "Internal - {0}",
+    "gwo.android.terminal.title": "Adb Shell - {0}",
+    "gwo.android.type.device": "Online",
+    "gwo.android.type.offline": "Offline",
+    "gwo.android.type.recovery": "Recovery",
+    "gwo.android.type.fastboot": "Fastboot",
+    "gwo.android.type.sideload": "Sideload",
+    "gwo.android.type.unauthorized": "Unauthorized"
+}
