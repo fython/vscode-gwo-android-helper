@@ -133,7 +133,7 @@ export class AdbFileSystemProvider implements vscode.FileSystemProvider {
     async writeFile(uri: vscode.Uri, content: Uint8Array, options: { create: boolean; overwrite: boolean; }): Promise<void> {
         const adbUri = AdbUri.fromVSCodeUri(uri);
         this.debugLog('writeFile:', adbUri);
-        return await adb.writeFile(adbUri.deviceId, adbUri.fullPath, StreamUtils.toReadable(content));
+        return await adb.writeFile(adbUri.deviceId, adbUri.fullPath, StreamUtils.toReadable(content), options.overwrite);
     }
 
     async delete(uri: vscode.Uri, options: { recursive: boolean; }): Promise<void> {

@@ -1,6 +1,6 @@
 {
   "name": "gwo-android-helper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "displayName": "%gwo.android.extension.name%",
   "description": "%gwo.android.extension.description%",
   "publisher": "Siubeng",
